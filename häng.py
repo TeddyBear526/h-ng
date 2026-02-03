@@ -21,14 +21,14 @@ guessed_letters = []
 
 while guesses > guesses_left:
     correct_plats = 0
-    guessed = str(input("gissa en bokstav "))
-    if guessed in alphabet:
-        if guessed in guessed_letters:
+    guessed = str.lower(input("gissa en bokstav "))
+    if guessed  in alphabet:
+        if guessed  in guessed_letters:
             print("Du har redan gissat den bokstaven.")
             print(f"Du har gissat", guessed_letters)
             continue
         guessed_letters.append(guessed)
-        if guessed in word:
+        if guessed  in word:
             print(f"Correct gisning, Bokstaven är på plats")
             for i, letter in enumerate(word):
                 if letter == guessed:
